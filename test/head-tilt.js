@@ -34,7 +34,7 @@ watcher.on('add', file => {
         var REyeY = pose[REye*3+1];
         var LEyeX = pose[LEye*3];
         var LEyeY = pose[LEye*3+1];
-        var tilt = math.atan2(-LEyeY + REyeY, LEyeX - REyeX) * 180 / math.pi;
+        var tilt = -1 * math.atan2(-LEyeY + REyeY, LEyeX - REyeX) * 180 / (math.pi * 180);
         //var frame = s.match(/-?\d+/g).map(Number);
         //log('Frame: %f\n Tilt: %f', frame, tilt);
         log('Tilt: %f', tilt);

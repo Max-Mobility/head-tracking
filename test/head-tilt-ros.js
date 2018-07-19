@@ -19,7 +19,7 @@ var ros = new ROSLIB.Ros({
 
 var cmdVel = new ROSLIB.Topic({
     ros: ros,
-    name: '/cmd_vel',
+    name: '/wheelchair/Head_Tilt',
     messageType: 'geometry_msgs/Twist'
 });
 
@@ -78,7 +78,7 @@ watcher.on('add', file => {
         var REyeY = pose[REye*3+1];
         var LEyeX = pose[LEye*3];
         var LEyeY = pose[LEye*3+1];
-        var tilt = math.atan2(-LEyeY + REyeY, LEyeX - REyeX) * 180 / math.pi;
+        var tilt = -1 * math.atan2(-LEyeY + REyeY, LEyeX - REyeX) * 180 / (math.pi * 180);
         publishOnRos(tilt);
     }
 });
