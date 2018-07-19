@@ -1,0 +1,24 @@
+{
+  "name": "head-tracking",
+  "version": "1.0.0",
+  "description": "Using OpenPose to track a user's head position and orientation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/max-mobility/head-tracking.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/max-mobility/head-tracking/issues"
+  },
+  "homepage": "https://github.com/max-mobility/head-tracking#readme",
+  "dependencies": {
+    "chokidar": "^2.0.4",
+    "mathjs": "^5.0.3",
+    "roslib": "^0.20.0"
+  }
+}
